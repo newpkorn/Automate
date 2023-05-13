@@ -115,3 +115,5 @@ TC008-Click hyperlink Create an account
     Check hyperlink create an account
     Wait Until Page Contains            Kru P' Beam    5s
     Close Browser
+
+# TC009-Test
