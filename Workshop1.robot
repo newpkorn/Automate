@@ -119,4 +119,4 @@ Not input data in require field
 Check hyperlink create an account
     Click Element    ${locator_hpl_createaccount}
 
-# 123
+# 12345
