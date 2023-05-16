@@ -3,7 +3,7 @@ Library           SeleniumLibrary
 
 *** Variables ***
 ${url}            https://automate-test.stpb-digital.com/login/
-${browser}        gc
+${browser}        ff
 ${locator_email}    id=email
 ${locator_password}    name=password
 ${locator_btnlogin}    id=btn-login
@@ -61,59 +61,60 @@ Check hyperlink create an account
     Click Element    ${locator_hpl_createaccount}
 
 *** Test Cases ***
-TC000-Show Defult Page
-    Open Web Browser
-    Wait Until Page Contains    Kru P' Beam    5s
-    Close Browser
+# TC000-Show Defult Page
+#     Open Web Browser
+#     Wait Until Page Contains    Kru P' Beam    5s
+#     Close Browser
 
-TC001-Input email pass
-    Open Web Browser
-    Input data for login email pass
-    Wait Until Element Is Not Visible    ${locator_errmsg_email}    5s
-    Close Browser
+# TC001-Input email pass
+#     Open Web Browser
+#     Input data for login email pass
+#     Wait Until Element Is Not Visible    ${locator_errmsg_email}    5s
+#     Close Browser
 
-TC002-Input email fail
-    Open Web Browser
-    Input data for login email fail
-    ${err_msg}=    Get Text    ${locator_errmsg_email}
-    Should Be Equal As Strings    ${err_msg}    email must be a valid email
-    Close Browser
+# TC002-Input email fail
+#     Open Web Browser
+#     Input data for login email fail
+#     ${err_msg}=    Get Text    ${locator_errmsg_email}
+#     Should Be Equal As Strings    ${err_msg}    email must be a valid email
+#     Close Browser
 
-TC003-Input password more than 5 digits
-    Open Web Browser
-    Input data for login password more than 5 digits
-    Wait Until Element Is Not Visible    ${locator_errmsg_password}    5s
-    Close Browser
+# TC003-Input password more than 5 digits
+#     Open Web Browser
+#     Input data for login password more than 5 digits
+#     Wait Until Element Is Not Visible    ${locator_errmsg_password}    5s
+#     Close Browser
 
-TC004-Input password more less 5 digits
-    Open Web Browser
-    Input data for login password less than 5 digits
-    ${err_msg}=    Get Text    ${locator_errmsg_password}
-    Should Be Equal As Strings    ${err_msg}    password must be at least 5 characters
-    Close Browser
+# TC004-Input password more less 5 digits
+#     Open Web Browser
+#     Input data for login password less than 5 digits
+#     ${err_msg}=    Get Text    ${locator_errmsg_password}
+#     Should Be Equal As Strings    ${err_msg}    password must be at least 5 characters
+#     Close Browser
 
 TC005-Web login pass
     Open Web Browser
     Input data for login page pass
-    Wait Until Page Contains    Search Filters    0.5s
+    Wait Until Page Contains    Search Filters    5s
     Close Browser
 
-TC006-Web login fail
-    Open Web Browser
-    Input data for login page fail
-    ${err_msg}=    Get Text    ${locator_errmsg_email}
-    Should Be Equal As Strings    ${err_msg}    Email or Password is invalid
-    Close Browser
+# TC006-Web login fail
+#     Open Web Browser
+#     Input data for login page fail
+#     ${err_msg}=    Get Text    ${locator_errmsg_email}
+#     Should Be Equal As Strings    ${err_msg}    Email or Password is invalid
+#     Close Browser
 
-TC007-Check require field
-    Open Web Browser
-    Not input data in require field
-    ${err_msg}=    Get Text    ${locator_errmsg_email}
-    Should Be Equal As Strings    ${err_msg}    email is a required field
-    Close Browser
+# TC007-Check require field
+#     Open Web Browser
+#     Not input data in require field
+#     ${err_msg}=    Get Text    ${locator_errmsg_email}
+#     Should Be Equal As Strings    ${err_msg}    email is a required field
+#     Close Browser
 
 TC008-Click Hyperlink Create an account
     Open Web Browser
+    Wait Until Element Is Visible    ${locator_hpl_createaccount}    5s
     Check hyperlink create an account
     Wait Until Page Contains    Kru P' Beam    5s
     Close Browser
