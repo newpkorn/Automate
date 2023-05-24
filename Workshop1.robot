@@ -2,63 +2,63 @@
 Library           SeleniumLibrary
 
 *** Variables ***
-${url}            https://automate-test.stpb-digital.com/login/
-${browser}        gc
-${locator_email}    id=email
-${locator_password}    name=password
-${locator_btnlogin}    id=btn-login
-${locator_errmsg_email}    //*[@id="__next"]/div[1]/div/div/div/div/div/form/div[1]/p
-${locator_errmsg_password}    //*[@id="__next"]/div[1]/div/div/div[2]/div/div/form/div[2]/p
+${url}                          https://automate-test.stpb-digital.com/login/
+${browser}                      gc
+${locator_email}                id=email
+${locator_password}             name=password
+${locator_btnlogin}             id=btn-login
+${locator_errmsg_email}         //*[@id="__next"]/div[1]/div/div/div/div/div/form/div[1]/p
+${locator_errmsg_password}      //*[@id="__next"]/div[1]/div/div/div[2]/div/div/form/div[2]/p
 ${locator_hpl_createaccount}    //*[@id="__next"]/div[1]/div/div/div[2]/div/div/form/div[4]/p[2]/a
 
 *** Keywords ***
 Open Web Browser
-    Set Selenium Speed    0.5s
-    Open Browser    ${url}    ${browser}
+    Set Selenium Speed      0.5s
+    Open Browser            ${url}    ${browser}
     Maximize Browser Window
 
 Input data for login email pass
-    Wait Until Element Is Visible    ${locator_email}    5s
-    Input Text    ${locator_email}    Beam1234@gmail.com
-    Input Text    ${locator_password}    ${EMPTY}
+    Wait Until Element Is Visible       ${locator_email}        5s
+    Input Text                          ${locator_email}        Beam1234@gmail.com
+    Input Text                          ${locator_password}     ${EMPTY}
 
 Input data for login email fail
-    Wait Until Element Is Visible    ${locator_email}    5s
-    Input Text    ${locator_email}    Beam1234gmail.com
-    Input Text    ${locator_password}    ${EMPTY}
+    Wait Until Element Is Visible       ${locator_email}        5s
+    Input Text                          ${locator_email}        Beam1234gmail.com
+    Input Text                          ${locator_password}     ${EMPTY}
 
 Input data for login password more than 5 digits
-    Wait Until Element Is Visible    ${locator_email}    5s
-    Input Text    ${locator_email}    ${EMPTY}
-    Input Text    ${locator_password}    1234567890
-    Click Element    ${locator_btnlogin}
+    Wait Until Element Is Visible       ${locator_email}        5s
+    Input Text                          ${locator_email}        ${EMPTY}
+    Input Text                          ${locator_password}     1234567890
+    Click Element                       ${locator_btnlogin}
 
 Input data for login password less than 5 digits
-    Wait Until Element Is Visible    ${locator_email}    5s
-    Input Text    ${locator_email}    ${EMPTY}
-    Input Text    ${locator_password}    123
-    Click Element    ${locator_btnlogin}
+    Wait Until Element Is Visible       ${locator_email}        5s
+    Input Text                          ${locator_email}        ${EMPTY}
+    Input Text                          ${locator_password}     123
+    Click Element                       ${locator_btnlogin}
 
 Input data for login page pass
-    Wait Until Element Is Visible    ${locator_email}    5s
-    Input Text    ${locator_email}    user.test@krupbeam.com
-    Input Text    ${locator_password}    123456789
-    Click Element    ${locator_btnlogin}
+    Wait Until Element Is Visible       ${locator_email}        5s
+    Input Text                          ${locator_email}        user.test@krupbeam.com
+    Input Text                          ${locator_password}     123456789
+    Click Element                       ${locator_btnlogin}
 
 Input data for login page fail
-    Wait Until Element Is Visible    ${locator_email}    5s
-    Input Text    ${locator_email}    Beam1234@gmail.com
-    Input Text    ${locator_password}    12345678900
-    Click Element    ${locator_btnlogin}
+    Wait Until Element Is Visible       ${locator_email}        5s
+    Input Text                          ${locator_email}        Beam1234@gmail.com
+    Input Text                          ${locator_password}     12345678900
+    Click Element                       ${locator_btnlogin}
 
 Not input data in require field
-    Wait Until Element Is Visible    ${locator_email}    5s
-    Input Text    ${locator_email}    ${EMPTY}
-    Input Text    ${locator_password}    ${EMPTY}
-    Click Element    ${locator_btnlogin}
+    Wait Until Element Is Visible       ${locator_email}        5s
+    Input Text                          ${locator_email}        ${EMPTY}
+    Input Text                          ${locator_password}     ${EMPTY}
+    Click Element                       ${locator_btnlogin}
 
 Check hyperlink create an account
-    Click Element    ${locator_hpl_createaccount}
+    Click Element                       ${locator_hpl_createaccount}
 
 *** Test Cases ***
 TC000-Show Defult Page
