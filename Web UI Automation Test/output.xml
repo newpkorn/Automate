@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.1.1 (Python 3.13.1 on darwin)" generated="2024-12-22T02:28:27.201862" rpa="false" schemaversion="5">
+<suite id="s1" name="Test" source="/Users/inew/Documents/Automate/Web UI Automation Test/Test.robot">
+<test id="s1-t1" name="TC000-Show Defult Page" line="39">
+<kw name="Open Web Browser">
+<kw name="Set Selenium Speed" owner="SeleniumLibrary">
+<arg>0.5s</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="PASS" start="2024-12-22T02:28:27.619571" elapsed="0.000230"/>
+</kw>
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-12-22T02:28:27.620202" level="INFO">Opening browser 'chrome' to base url 'https://aroidee.netlify.app/'.</msg>
+<arg>${url}</arg>
+<arg>${browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-12-22T02:28:27.619990" elapsed="2.465827"/>
+</kw>
+<status status="PASS" start="2024-12-22T02:28:27.618884" elapsed="2.467431"/>
+</kw>
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>Top dishes near you</arg>
+<arg>10s</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2024-12-22T02:28:30.087096" elapsed="2.037343"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-12-22T02:28:37.126316" level="INFO">Slept 5 seconds.</msg>
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-12-22T02:28:32.125356" elapsed="5.001419"/>
+</kw>
+<kw name="Close Window" owner="SeleniumLibrary">
+<doc>Closes currently opened and selected browser window/tab.</doc>
+<status status="PASS" start="2024-12-22T02:28:37.127392" elapsed="0.723624"/>
+</kw>
+<status status="PASS" start="2024-12-22T02:28:27.618271" elapsed="10.233455"/>
+</test>
+<test id="s1-t2" name="TC001-Show Login Popup" line="45">
+<kw name="Open Web Browser">
+<kw name="Set Selenium Speed" owner="SeleniumLibrary">
+<arg>0.5s</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="PASS" start="2024-12-22T02:28:37.853666" elapsed="0.000352"/>
+</kw>
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-12-22T02:28:37.854665" level="INFO">Opening browser 'chrome' to base url 'https://aroidee.netlify.app/'.</msg>
+<arg>${url}</arg>
+<arg>${browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-12-22T02:28:37.854297" elapsed="2.765232"/>
+</kw>
+<status status="PASS" start="2024-12-22T02:28:37.853183" elapsed="2.766958"/>
+</kw>
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>Top dishes near you</arg>
+<arg>10s</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2024-12-22T02:28:40.620953" elapsed="0.522949"/>
+</kw>
+<kw name="Show Login Popup">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-12-22T02:28:41.146762" level="INFO">Clicking element '//*[@id="root"]/div[1]/div[1]/div/button'.</msg>
+<arg>${locator_btnLogin}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-12-22T02:28:41.145247" elapsed="1.095450"/>
+</kw>
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>Login</arg>
+<arg>10s</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2024-12-22T02:28:42.241039" elapsed="0.518170"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-12-22T02:28:42.760030" level="INFO">Clicking element '//*[@id="root"]/div[1]/form/div[1]/img'.</msg>
+<arg>${locator_closeLoginPage}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-12-22T02:28:42.759655" elapsed="1.074362"/>
+</kw>
+<status status="PASS" start="2024-12-22T02:28:41.144622" elapsed="2.689951"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-12-22T02:28:48.835754" level="INFO">Slept 5 seconds.</msg>
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-12-22T02:28:43.835103" elapsed="5.000888"/>
+</kw>
+<kw name="Close Window" owner="SeleniumLibrary">
+<doc>Closes currently opened and selected browser window/tab.</doc>
+<status status="PASS" start="2024-12-22T02:28:48.836319" elapsed="0.709554"/>
+</kw>
+<status status="PASS" start="2024-12-22T02:28:37.852337" elapsed="11.693914"/>
+</test>
+<test id="s1-t3" name="TC002-Login System" line="52">
+<kw name="Open Web Browser">
+<kw name="Set Selenium Speed" owner="SeleniumLibrary">
+<arg>0.5s</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="PASS" start="2024-12-22T02:28:49.547543" elapsed="0.000280"/>
+</kw>
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-12-22T02:28:49.548322" level="INFO">Opening browser 'chrome' to base url 'https://aroidee.netlify.app/'.</msg>
+<arg>${url}</arg>
+<arg>${browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-12-22T02:28:49.548046" elapsed="4.720996"/>
+</kw>
+<status status="PASS" start="2024-12-22T02:28:49.547191" elapsed="4.722479"/>
+</kw>
+<kw name="Login System pass">
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2024-12-22T02:28:54.271924" level="INFO">${p} = 12344321</msg>
+<var>${p}</var>
+<arg>12344321</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2024-12-22T02:28:54.271633" elapsed="0.000345"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${locator_food_display}</arg>
+<arg>10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-12-22T02:28:54.272175" elapsed="1.036631"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-12-22T02:28:55.309389" level="INFO">Clicking element '//*[@id="root"]/div[1]/div[1]/div/button'.</msg>
+<arg>${locator_btnLogin}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-12-22T02:28:55.309085" elapsed="1.089002"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-12-22T02:28:56.398890" level="INFO">Typing text 'test@test.com' into text field 'name=email'.</msg>
+<arg>${locator_email}</arg>
+<arg>test@test.com</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-12-22T02:28:56.398458" elapsed="1.704371"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-12-22T02:28:58.104151" level="INFO">Typing text '12344321' into text field 'name=password'.</msg>
+<arg>${locator_password}</arg>
+<arg>${p}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-12-22T02:28:58.103583" elapsed="1.593734"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-12-22T02:28:59.698348" level="INFO">Clicking element '//*[@id="root"]/div[1]/form/div[3]/input'.</msg>
+<arg>${locator_chk_box}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-12-22T02:28:59.697909" elapsed="1.082112"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-12-22T02:29:00.780810" level="INFO">Clicking element '//*[@id="root"]/div[1]/form/button'.</msg>
+<arg>${locator_signInBtn}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-12-22T02:29:00.780394" elapsed="1.068732"/>
+</kw>
+<status status="PASS" start="2024-12-22T02:28:54.271010" elapsed="7.578537"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${locator_user_display}</arg>
+<arg>10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-12-22T02:29:01.850221" elapsed="1.757428"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-12-22T02:29:13.609515" level="INFO">Slept 10 seconds.</msg>
+<arg>10s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-12-22T02:29:03.608370" elapsed="10.001413"/>
+</kw>
+<kw name="Close Window" owner="SeleniumLibrary">
+<doc>Closes currently opened and selected browser window/tab.</doc>
+<status status="PASS" start="2024-12-22T02:29:13.610750" elapsed="0.731616"/>
+</kw>
+<status status="PASS" start="2024-12-22T02:28:49.546692" elapsed="24.796429"/>
+</test>
+<status status="PASS" start="2024-12-22T02:28:27.203128" elapsed="47.142455"/>
+</suite>
+<statistics>
+<total>
+<stat pass="3" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="3" fail="0" skip="0" id="s1" name="Test">Test</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
